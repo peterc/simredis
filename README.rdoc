@@ -1,0 +1,54 @@
+= SimRedis (Pure Ruby Redis simulator for redis-rb)
+
+* http://github.com/peterc/simredis
+
+== STATUS:
+
+SimRedis is NOT READY FOR ANY SORT OF SERIOUS USE YET! Currently all of the generic and string methods are working OK, except for anything involving expiration or blocking.
+
+== DESCRIPTION:
+
+SimRedis is a Redis simulator for the popular redis-rb library. Essentially, you can now use Redis without a Redis daemon running. Everything is stored in memory only and is very thread unsafe, but persistence and locking comes in time.
+
+== EXAMPLES:
+
+    require 'redis'
+    require 'simredis'
+    
+     r = Redis.new
+     r.set("a", "hello world")
+     r.get("a")  # => "hello world"
+     r.keys("*") # => ['a']
+     r.flushdb
+     r.keys("*") # => []
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a future version unintentionally.
+* Commit, do not mess with Rakefile, version, or history as it's handled by Jeweler (which is awesome, btw).
+* Send me a pull request. I may or may not accept it (sorry, practicality rules.. but message me and we can talk!)
+
+== COPYRIGHT AND LICENSE
+
+Copyright (c) 2010 Peter Cooper
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
