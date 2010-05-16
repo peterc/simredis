@@ -399,7 +399,7 @@ class Redis
     end
 
     def write(data)
-      puts "SEND: #{data.inspect}" if TESTING
+      puts "SEND: #{data.inspect}" if defined?(TESTING)
       cmd, *data = data.split("\r\n")
       if cmd =~ /^\*/
         data.delete_if { |d| d =~ /^\$/ }
@@ -411,7 +411,7 @@ class Redis
         cmd, *args = cmd.split(' ')
       end
       @output_queue += @emulator.send(cmd.downcase.to_sym, args)
-      puts "RECV: #{@output_queue.inspect}" if TESTING
+      puts "RECV: #{@output_queue.inspect}" if defined?(TESTING)
     end
     
     def read(b); @output_queue.shift; end
