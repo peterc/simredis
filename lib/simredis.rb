@@ -1,5 +1,6 @@
-require 'rubygems'
-require 'redis'
+unless defined?(Redis)
+  require 'redis'
+end
 
 class Redis
   class Emulator
