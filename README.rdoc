@@ -8,7 +8,9 @@ SimRedis is NOT READY FOR ANY SORT OF SERIOUS USE YET! Currently all of the gene
 
 == DESCRIPTION:
 
-SimRedis is a Redis simulator for the popular redis-rb library. Essentially, you can now use Redis without a Redis daemon running. Everything is stored in memory only and is very thread unsafe, but persistence and locking comes in time.
+SimRedis is a Redis simulator for the popular redis-rb library. SimRedis lets you use the Redis Ruby client library without a Redis daemon running. Everything is stored in memory only and is very thread unsafe, but persistence and locking comes in time.
+
+Why simulate Redis? I love Redis and some of the ideas it brings to the table, and while I can roll out onto servers stocked with working Redis installs OK, sometimes I might want to still use Redis in my app but not require its full power (or I might want to deploy somewhere that doesn't have Redis - like Dreamhost, say). I'd also like to distribute apps I make so that other people can use them without being forced to install a whole new daemon first.
 
 == EXAMPLES:
 
