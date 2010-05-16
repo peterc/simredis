@@ -15,12 +15,12 @@ SimRedis is a Redis simulator for the popular redis-rb library. Essentially, you
     require 'redis'
     require 'simredis'
     
-     r = Redis.new
-     r.set("a", "hello world")
-     r.get("a")  # => "hello world"
-     r.keys("*") # => ['a']
-     r.flushdb
-     r.keys("*") # => []
+    r = Redis.new
+    r.set("a", "hello world")
+    r.get("a")  # => "hello world"
+    r.keys("*") # => ['a']
+    r.flushdb
+    r.keys("*") # => []
 
 == Note on Patches/Pull Requests
  
