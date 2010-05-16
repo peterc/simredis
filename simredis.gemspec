@@ -5,13 +5,23 @@
 
 Gem::Specification.new do |s|
   s.name = %q{simredis}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Peter Cooper"]
   s.date = %q{2010-05-16}
   s.description = %q{Redis 'simulator' that allows you to use redis-rb without a Redis daemon running. Useful in situations where you want to deploy basic Redis-based apps quickly or to people who haven't got the ability to set up the Redis daemon.}
   s.email = %q{simredis@peterc.org}
+  s.extra_rdoc_files = [
+    "README.rdoc"
+  ]
+  s.files = [
+    "README.rdoc",
+     "Rakefile",
+     "VERSION",
+     "simredis.gemspec",
+     "simredis.rb"
+  ]
   s.homepage = %q{http://github.com/peterc/simredis}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
